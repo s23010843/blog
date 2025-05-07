@@ -9,7 +9,6 @@ Welcome to the **Official Tech Blog**! This blog serves as a platform to share h
 - **Contact Page**: A way for users to get in touch with the creators via email.
 - **Search Functionality**: Allows users to filter blog posts in real-time as they type.
 - **Responsive Design**: The website adapts to different screen sizes, making it mobile-friendly.
-- **Dark Mode**: Users can toggle between light and dark modes for a better reading experience.
 - **SEO Optimized**: The website includes SEO meta tags for improved search engine visibility.
 
 ## Installation
