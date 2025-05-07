@@ -157,45 +157,44 @@ footer {
   display: none;
   background: var(--accent);
   color: white;
-  border:
-  none;
+  border: none;
   padding: 12px 18px;
   font-size: 16px;
   border-radius: 50%;
   cursor: pointer;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-  transition: background var(--hover-transition);
-  }
-  
-  #topBtn:hover {
+  transition: background 0.3s ease;
+}
+
+#topBtn:hover {
   background: var(--primary);
-  }
-  
-  @media (max-width: 768px) {
+}
+
+@media (max-width: 768px) {
   main {
-  flex-direction: column;
+    flex-direction: column;
   }
   .posts, .sidebar, .page {
-  width: 100%;
-  padding: 0;
+    width: 100%;
+    padding: 0;
   }
   .sidebar {
-  margin-top: 20px;
+    margin-top: 20px;
   }
-  }
-  
-  /* Animations */
-  @keyframes fadeIn {
+}
+
+/* Animations */
+@keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeInUp {
+}
+
+@keyframes fadeInUp {
   from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeInDown {
+}
+
+@keyframes fadeInDown {
   from { opacity: 0; transform: translateY(-20px); }
   to { opacity: 1; transform: translateY(0); }
-  }
+}
