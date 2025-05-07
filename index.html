@@ -200,14 +200,15 @@
   <header>
     <div class="top-bar">
       <h1>Official Tech Blog</h1>
-      <span id="currentDate"></span>
+      <span id="currentDate"></span> |
+      <span id="currentTime"></span>
     </div>
     <nav>
       <ul>
-        <li><a href="#!/home">Home</a></li>
-        <li><a href="#!/about">About</a></li>
-        <li><a href="#!/blog">Blog</a></li>
-        <li><a href="#!/contact">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -258,18 +259,18 @@
     <aside class="sidebar">
       <h3>Recent Posts</h3>
       <ul>
-        <li><a href="/blog#post1">Mastering Python for Data Analysis</a></li>
-        <li><a href="/blog#post2">Cybersecurity Essentials for Developers</a></li>
-        <li><a href="/blog#post3">Deploying with Docker</a></li>
-        <li><a href="/blog#post4">Machine Learning Algorithms Explained</a></li>
-        <li><a href="/blog#post5">Best Practices for API Security</a></li>
+        <li><a href="#post1">Mastering Python for Data Analysis</a></li>
+        <li><a href="#post2">Cybersecurity Essentials for Developers</a></li>
+        <li><a href="#post3">Deploying with Docker</a></li>
+        <li><a href="#post4">Machine Learning Algorithms Explained</a></li>
+        <li><a href="#post5">Best Practices for API Security</a></li>
       </ul>
     </aside>
   </main>
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Tech Blog Co. — All rights reserved.</p>
+    <p>&copy; <span id="currentYear"></span> Tech Blog Co. — All rights reserved.</p>
   </footer>
 
   <!-- BACK TO TOP BUTTON -->
@@ -286,13 +287,27 @@
       window.scrollTo({ top: 0, behavior: "smooth" });
     }
 
-    // Date
+    // Date & Time
     const dateElem = document.getElementById("currentDate");
+    const timeElem = document.getElementById("currentTime");
+    const yearElem = document.getElementById("currentYear");
+
     dateElem.textContent = new Date().toLocaleDateString(undefined, {
       weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
     });
 
-    // Page routing
+    // Set current year in footer
+    yearElem.textContent = new Date().getFullYear();
+
+    // Display current time in header
+    function updateTime() {
+      const now = new Date();
+      timeElem.textContent = now.toLocaleTimeString();
+    }
+    setInterval(updateTime, 1000); // Update every second
+    updateTime(); // Initial call to set the time right away
+
+    // Page routing (hash navigation)
     const pages = document.querySelectorAll(".page, .posts");
     function showPage(pageId) {
       pages.forEach(section => {
