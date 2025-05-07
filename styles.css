@@ -1,0 +1,141 @@
+/* Global Styles */
+:root {
+    --primary: #1d3557;
+    --secondary: #fca311;
+    --background: #f8f9fa;
+    --white: #ffffff;
+    --text: #333;
+    --gray: #6c757d;
+    --accent: #38b6ff;
+    --font-family: 'Segoe UI', sans-serif;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: var(--font-family);
+    background: var(--background);
+    color: var(--text);
+    scroll-behavior: smooth;
+  }
+  
+  header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  header .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  header nav ul {
+    display: flex;
+    list-style: none;
+    margin-top: 10px;
+  }
+  
+  header nav ul li {
+    margin-right: 20px;
+  }
+  
+  header nav ul li a {
+    color: var(--secondary);
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  header .search-container {
+    display: flex;
+    margin-top: 20px;
+  }
+  
+  header .search-container input {
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid var(--gray);
+    margin-right: 10px;
+    width: 250px;
+  }
+  
+  header .search-container button {
+    padding: 10px 20px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  header .search-container button:hover {
+    background-color: var(--secondary);
+  }
+  
+  main {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .page {
+    flex: 1;
+    margin-bottom: 20px;
+  }
+  
+  .page-content {
+    background: var(--white);
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+  }
+  
+  footer {
+    background: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 20px;
+  }
+  
+  #topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent);
+    color: var(--white);
+    border: none;
+    padding: 12px 18px;
+    font-size: 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+  }
+  
+  #topBtn:hover {
+    background-color: var(--primary);
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    header nav ul {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    main {
+      flex-direction: column;
+    }
+  
+    .search-container input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
