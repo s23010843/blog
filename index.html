@@ -1,224 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Official Tech Blog - Your source for the latest in tech, data science, AI, and cybersecurity.">
-  <meta name="keywords" content="tech blog, data science, AI, machine learning, cybersecurity, python, software development">
-  <meta name="author" content="Tech Blog Co.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Official Tech Blog - Your source for the latest in tech, data science, AI, and cybersecurity.">
+  <meta name="keywords"
+    content="tech blog, data science, AI, machine learning, cybersecurity, python, software development">
+
+    <meta name="author" content="s23010843">
   <meta name="robots" content="index, follow">
+
   <meta property="og:title" content="Official Tech Blog">
-  <meta property="og:description" content="Your go-to source for tech insights, tutorials, and news on data science, cybersecurity, and AI.">
+  <meta property="og:description"
+    content="Your go-to source for tech insights, tutorials, and news on data science, cybersecurity, and AI.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.techblog.com/">
-  <meta property="og:image" content="https://www.techblog.com/favicon.ico">
+  <meta property="og:url" content="https://s23010843.github.io">
+  <meta property="og:image" content="https://s23010843.github.io/favicon.ico">
   <meta property="og:site_name" content="Official Tech Blog">
+
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+
   <title>Official Tech Blog</title>
 
-  <style>
-    :root {
-      --primary: #1d3557;
-      --secondary: #fca311;
-      --background: #f8f9fa;
-      --white: #ffffff;
-      --text: #333;
-      --gray: #6c757d;
-      --accent: #38b6ff;
-      --hover-transition: 0.3s ease;
-      --padding: 20px;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html, body {
-      height: 100%;
-      font-family: 'Segoe UI', sans-serif;
-      background: var(--background);
-      color: var(--text);
-      scroll-behavior: smooth;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
-    }
-
-    header {
-      background: var(--primary);
-      color: var(--white);
-      padding: var(--padding);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      animation: fadeInDown 0.6s ease;
-    }
-
-    header .top-bar {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    header nav ul {
-      display: flex;
-      list-style: none;
-      margin-top: 10px;
-      flex-wrap: wrap;
-    }
-
-    header nav ul li {
-      margin-right: 20px;
-    }
-
-    header nav ul li a {
-      color: var(--secondary);
-      font-weight: bold;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    header nav ul li a:hover {
-      color: var(--white);
-      transition: var(--hover-transition);
-    }
-
-    header .search-box {
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-    }
-
-    header .search-box input {
-      padding: 8px;
-      border: 1px solid var(--gray);
-      border-radius: 4px;
-      margin-right: 10px;
-      font-size: 16px;
-    }
-
-    main {
-      display: flex;
-      flex-wrap: wrap;
-      flex: 1;
-      padding: var(--padding);
-      min-height: 70vh;
-      animation: fadeIn 1s ease;
-    }
-
-    .posts, .page {
-      flex: 3;
-      padding-right: 20px;
-    }
-
-    .post, .page-content {
-      background: var(--white);
-      padding: 25px;
-      margin-bottom: 30px;
-      border-left: 6px solid var(--accent);
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-      transition: transform 0.3s ease;
-      animation: fadeInUp 0.8s ease;
-    }
-
-    .post:hover {
-      transform: translateY(-5px);
-    }
-
-    .post img {
-      width: 100%;
-      border-radius: 6px;
-      margin-bottom: 15px;
-    }
-
-    .sidebar {
-      flex: 1;
-      background: var(--white);
-      padding: 20px;
-      border-left: 4px solid var(--secondary);
-      border-radius: 6px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-
-    .sidebar h3 {
-      color: var(--primary);
-      margin-bottom: 10px;
-    }
-
-    .sidebar ul {
-      list-style: none;
-    }
-
-    .sidebar ul li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background: var(--primary);
-      color: var(--white);
-      text-align: center;
-      padding: var(--padding);
-      position: sticky;
-      bottom: 0;
-      width: 100%;
-      z-index: 10;
-      animation: fadeInUp 1s ease;
-    }
-
-    #topBtn {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      display: none;
-      background: var(--accent);
-      color: white;
-      border: none;
-      padding: 12px 18px;
-      font-size: 16px;
-      border-radius: 50%;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
-      transition: background 0.3s ease;
-    }
-
-    #topBtn:hover {
-      background: var(--primary);
-    }
-
-    @media (max-width: 768px) {
-      main {
-        flex-direction: column;
-      }
-      .posts, .sidebar, .page {
-        width: 100%;
-        padding: 0;
-      }
-      .sidebar {
-        margin-top: 20px;
-      }
-    }
-
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 </head>
+
 <body>
 
   <!-- HEADER -->
@@ -257,7 +65,8 @@
     <section id="about" class="page" style="display: none;">
       <div class="page-content">
         <h2>About Us</h2>
-        <p>We are a group of passionate developers and tech enthusiasts sharing knowledge through blog posts, tutorials, and courses.</p>
+        <p>We are a group of passionate developers and tech enthusiasts sharing knowledge through blog posts, tutorials,
+          and courses.</p>
       </div>
     </section>
 
@@ -281,7 +90,7 @@
     <section id="contact" class="page" style="display: none;">
       <div class="page-content">
         <h2>Contact Us</h2>
-        <p>Feel free to reach out to us through <a href="mailto:">coming soon...</a>.</p>
+        <p>Feel free to reach out to us through <a href="mailto:">Coming Soon...</a>.</p>
       </div>
     </section>
 
@@ -298,64 +107,14 @@
 
   <!-- FOOTER -->
   <footer>
-    <p>&copy; <span id="currentYear"></span> Tech Blog Co. — All rights reserved.</p>
+    <p>&copy; <span id="currentYear"></span> — All rights reserved.</p>
   </footer>
 
   <!-- BACK TO TOP BUTTON -->
   <button id="topBtn" onclick="scrollToTop()">↑</button>
 
   <!-- JS -->
-  <script>
-    class Blog {
-      constructor() {
-        this.posts = document.querySelectorAll(".post");
-      }
-
-      showPage(pageId) {
-        const pages = document.querySelectorAll(".page, .posts");
-        pages.forEach(page => {
-          page.style.display = page.id === pageId ? "block" : "none";
-        });
-      }
-
-      updateDateTime() {
-        const dateElem = document.getElementById("currentDate");
-        const timeElem = document.getElementById("currentTime");
-        const yearElem = document.getElementById("currentYear");
-
-        dateElem.textContent = new Date().toLocaleDateString(undefined, {
-          weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'
-        });
-
-        yearElem.textContent = new Date().getFullYear();
-
-        setInterval(() => {
-          const now = new Date();
-          timeElem.textContent = now.toLocaleTimeString();
-        }, 1000);
-      }
-
-      filterPosts() {
-        const searchInput = document.getElementById("searchInput").value.toLowerCase();
-        this.posts.forEach(post => {
-          const title = post.querySelector("h2").textContent.toLowerCase();
-          post.style.display = title.includes(searchInput) ? "block" : "none";
-        });
-      }
-    }
-
-    document.addEventListener("DOMContentLoaded", () => {
-      const blog = new Blog();
-      blog.updateDateTime();
-
-      window.addEventListener("hashchange", () => {
-        const route = location.hash.substring(1) || "home";
-        blog.showPage(route);
-      });
-
-      const route = location.hash.substring(1) || "home";
-      blog.showPage(route);
-    });
-  </script>
+   <script src="script.js"></script>
 </body>
+
 </html>
