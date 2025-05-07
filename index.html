@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pro Blog</title>
+  <title>Official Tech Blog</title>
   <style>
     :root {
       --primary: #1d3557;
@@ -204,10 +204,10 @@
     </div>
     <nav>
       <ul>
-        <li><a href="/home">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/blog">Blog</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="#!/home">Home</a></li>
+        <li><a href="#!/about">About</a></li>
+        <li><a href="#!/blog">Blog</a></li>
+        <li><a href="#!/contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -232,13 +232,13 @@
 
     <!-- BLOG PAGE -->
     <section id="blog" class="posts" style="display: none;">
-      <div class="post">
+      <div class="post" id="post1">
         <img src="https://via.placeholder.com/800x300" alt="Blog Post">
         <h2>Mastering Python for Data Analysis</h2>
         <p>Discover powerful techniques and libraries in Python that help with real-world data cleaning, analysis, and visualization.</p>
         <a href="#">Read More</a>
       </div>
-      <div class="post">
+      <div class="post" id="post2">
         <img src="https://via.placeholder.com/800x300" alt="Blog Post">
         <h2>Cybersecurity Essentials for Developers</h2>
         <p>Learn how to secure your web apps, APIs, and cloud infrastructure with practical tips every developer should follow.</p>
@@ -258,9 +258,11 @@
     <aside class="sidebar">
       <h3>Recent Posts</h3>
       <ul>
-        <li><a href="/blog">Data Science in Python</a></li>
-        <li><a href="/blog">Cybersecurity Tips</a></li>
-        <li><a href="/blog">Deploying with Docker</a></li>
+        <li><a href="/blog#post1">Mastering Python for Data Analysis</a></li>
+        <li><a href="/blog#post2">Cybersecurity Essentials for Developers</a></li>
+        <li><a href="/blog#post3">Deploying with Docker</a></li>
+        <li><a href="/blog#post4">Machine Learning Algorithms Explained</a></li>
+        <li><a href="/blog#post5">Best Practices for API Security</a></li>
       </ul>
     </aside>
   </main>
@@ -298,13 +300,13 @@
       });
     }
 
-    window.addEventListener("popstate", () => {
-      const route = location.pathname.substring(1) || "home";
+    window.addEventListener("hashchange", () => {
+      const route = location.hash.substring(1) || "home";
       showPage(route);
     });
 
     document.addEventListener("DOMContentLoaded", () => {
-      const route = location.pathname.substring(1) || "home";
+      const route = location.hash.substring(1) || "home";
       showPage(route);
     });
   </script>
