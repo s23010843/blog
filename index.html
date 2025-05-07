@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Official Tech Blog - Your source for the latest in tech, data science, AI, and cybersecurity.">
   <meta name="keywords" content="tech blog, data science, AI, machine learning, cybersecurity, python, software development">
   <meta name="author" content="Tech Blog Co.">
@@ -15,8 +15,10 @@
   <meta property="og:site_name" content="Official Tech Blog">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
   <title>Official Tech Blog</title>
-
+  
+  <!-- Link to CSS -->
   <link rel="stylesheet" href="styles.css">
+
 </head>
 <body>
 
@@ -24,49 +26,75 @@
   <header>
     <div class="top-bar">
       <h1>Official Tech Blog</h1>
-      <span id="currentDate"></span> | <span id="currentTime"></span>
+      <span id="currentDate"></span> |
+      <span id="currentTime"></span>
     </div>
     <nav>
       <ul>
-        <li><a href="#home" class="nav-link">Home</a></li>
-        <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#blog" class="nav-link">Blog</a></li>
-        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
 
-    <div class="search-container">
-      <input type="text" id="searchBox" placeholder="Search...">
-      <button id="searchBtn">Search</button>
+    <!-- Search Box -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterPosts()">
     </div>
   </header>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <main>
+    <!-- HOME PAGE -->
     <section id="home" class="page">
       <div class="page-content">
         <h2>Welcome to Our Blog</h2>
-        <p>This is an official platform where we publish high-quality articles on development, data science, cybersecurity, and emerging tech.</p>
+        <p>We share the latest tech news, tutorials, and insights about development, AI, data science, and more.</p>
       </div>
     </section>
 
-    <section id="about" class="page">
+    <!-- ABOUT PAGE -->
+    <section id="about" class="page" style="display: none;">
       <div class="page-content">
         <h2>About Us</h2>
-        <p>We’re a team of tech professionals sharing insights, tutorials, and guides from years of experience in the field of software engineering, AI, and data security.</p>
+        <p>We are a group of passionate developers and tech enthusiasts sharing knowledge through blog posts, tutorials, and courses.</p>
       </div>
     </section>
 
-    <section id="blog" class="posts page">
-      <!-- Blog posts will appear here -->
+    <!-- BLOG PAGE -->
+    <section id="blog" class="posts" style="display: none;">
+      <div class="post" id="post1">
+        <img src="https://via.placeholder.com/800x300" alt="Blog Post">
+        <h2>Mastering Python for Data Analysis</h2>
+        <p>Learn how to leverage Python's powerful libraries for data cleaning, manipulation, and visualization.</p>
+        <a href="#">Read More</a>
+      </div>
+      <div class="post" id="post2">
+        <img src="https://via.placeholder.com/800x300" alt="Blog Post">
+        <h2>Introduction to Cybersecurity for Developers</h2>
+        <p>Understand essential cybersecurity concepts every developer needs to know to secure web applications.</p>
+        <a href="#">Read More</a>
+      </div>
     </section>
 
-    <section id="contact" class="page">
+    <!-- CONTACT PAGE -->
+    <section id="contact" class="page" style="display: none;">
       <div class="page-content">
         <h2>Contact Us</h2>
-        <p>We’d love to hear from you. Email us at <a href="mailto:info@techblog.com">info@techblog.com</a> or follow us on our social media platforms.</p>
+        <p>Feel free to reach out to us through <a href="mailto:info@techblog.com">info@techblog.com</a>.</p>
       </div>
     </section>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <h3>Recent Posts</h3>
+      <ul>
+        <li><a href="#post1">Mastering Python for Data Analysis</a></li>
+        <li><a href="#post2">Cybersecurity Essentials for Developers</a></li>
+        <li><a href="#post3">Docker for Beginners</a></li>
+      </ul>
+    </aside>
   </main>
 
   <!-- FOOTER -->
@@ -77,6 +105,7 @@
   <!-- BACK TO TOP BUTTON -->
   <button id="topBtn" onclick="scrollToTop()">↑</button>
 
-  <script src="scripts.js"></script>
+  <!-- Link to JS -->
+  <script src="script.js"></script>
 </body>
 </html>

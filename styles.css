@@ -1,141 +1,201 @@
-/* Global Styles */
 :root {
-    --primary: #1d3557;
-    --secondary: #fca311;
-    --background: #f8f9fa;
-    --white: #ffffff;
-    --text: #333;
-    --gray: #6c757d;
-    --accent: #38b6ff;
-    --font-family: 'Segoe UI', sans-serif;
-  }
-  
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html, body {
-    height: 100%;
-    font-family: var(--font-family);
-    background: var(--background);
-    color: var(--text);
-    scroll-behavior: smooth;
-  }
-  
-  header {
-    background: var(--primary);
-    color: var(--white);
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  header .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  header nav ul {
-    display: flex;
-    list-style: none;
-    margin-top: 10px;
-  }
-  
-  header nav ul li {
-    margin-right: 20px;
-  }
-  
-  header nav ul li a {
-    color: var(--secondary);
-    font-weight: bold;
-    text-decoration: none;
-  }
-  
-  header .search-container {
-    display: flex;
-    margin-top: 20px;
-  }
-  
-  header .search-container input {
-    padding: 10px;
-    border-radius: 4px;
-    border: 1px solid var(--gray);
-    margin-right: 10px;
-    width: 250px;
-  }
-  
-  header .search-container button {
-    padding: 10px 20px;
-    background-color: var(--accent);
-    color: var(--white);
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  header .search-container button:hover {
-    background-color: var(--secondary);
-  }
-  
-  main {
-    padding: 30px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  .page {
-    flex: 1;
-    margin-bottom: 20px;
-  }
-  
-  .page-content {
-    background: var(--white);
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 6px;
-  }
-  
-  footer {
-    background: var(--primary);
-    color: var(--white);
-    text-align: center;
-    padding: 20px;
-  }
-  
-  #topBtn {
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    background-color: var(--accent);
-    color: var(--white);
-    border: none;
-    padding: 12px 18px;
-    font-size: 16px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: none;
+  --primary: #1d3557;
+  --secondary: #fca311;
+  --background: #f8f9fa;
+  --white: #ffffff;
+  --text: #333;
+  --gray: #6c757d;
+  --accent: #38b6ff;
+  --hover-transition: 0.3s ease;
+  --padding: 20px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--background);
+  color: var(--text);
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: var(--primary);
+  color: var(--white);
+  padding: var(--padding);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  animation: fadeInDown 0.6s ease;
+}
+
+header .top-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+header nav ul li {
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: var(--secondary);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header nav ul li a:hover {
+  color: var(--white);
+  transition: var(--hover-transition);
+}
+
+header .search-box {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+}
+
+header .search-box input {
+  padding: 8px;
+  border: 1px solid var(--gray);
+  border-radius: 4px;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1;
+  padding: var(--padding);
+  min-height: 70vh;
+  animation: fadeIn 1s ease;
+}
+
+.posts, .page {
+  flex: 3;
+  padding-right: 20px;
+}
+
+.post, .page-content {
+  background: var(--white);
+  padding: 25px;
+  margin-bottom: 30px;
+  border-left: 6px solid var(--accent);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+  animation: fadeInUp 0.8s ease;
+}
+
+.post:hover {
+  transform: translateY(-5px);
+}
+
+.post img {
+  width: 100%;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
+
+.sidebar {
+  flex: 1;
+  background: var(--white);
+  padding: 20px;
+  border-left: 4px solid var(--secondary);
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.sidebar h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+}
+
+footer {
+  background: var(--primary);
+  color: var(--white);
+  text-align: center;
+  padding: var(--padding);
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+  animation: fadeInUp 1s ease;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: var(--accent);
+  color: white;
+  border:
+  none;
+  padding: 12px 18px;
+  font-size: 16px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  transition: background var(--hover-transition);
   }
   
   #topBtn:hover {
-    background-color: var(--primary);
+  background: var(--primary);
   }
   
-  /* Responsive Design */
   @media (max-width: 768px) {
-    header nav ul {
-      flex-direction: column;
-      margin-top: 20px;
-    }
-  
-    main {
-      flex-direction: column;
-    }
-  
-    .search-container input {
-      width: 100%;
-      margin-bottom: 10px;
-    }
+  main {
+  flex-direction: column;
+  }
+  .posts, .sidebar, .page {
+  width: 100%;
+  padding: 0;
+  }
+  .sidebar {
+  margin-top: 20px;
+  }
   }
   
+  /* Animations */
+  @keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
+  
+  @keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+  }
