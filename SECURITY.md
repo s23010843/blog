@@ -110,7 +110,7 @@ Content-Security-Policy:
   style-src 'self' 'unsafe-inline';
   img-src 'self' data: https:;
   font-src 'self' https://fonts.gstatic.com;
-  connect-src 'self' https://api.techblog.com;
+  connect-src 'self' https://api.s23010843.github.io/blog;
   frame-ancestors 'none';
   base-uri 'none';
   object-src 'none';
