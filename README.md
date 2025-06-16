@@ -331,7 +331,6 @@ We appreciate all contributors who help make this project better!
 - **Wiki**: Extended documentation and guides
 
 ### 📧 Direct Contact
-- **Email**: contact@techblog.com
 - **Response Time**: Within 24-48 hours
 - **Emergency**: Use GitHub issues for urgent matters
 
