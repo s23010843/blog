@@ -1,0 +1,71 @@
+
+# Official Tech Blog - Robots.txt
+# https://s23010843.github.io/robots.txt
+
+# Allow all web crawlers access to all content
+User-agent: *
+Allow: /
+
+# Specific rules for Google
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+# Specific rules for Bing
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+# Block access to admin and private areas (if any)
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+Disallow: /sw.js
+
+# Allow access to important files
+Allow: /manifest.json
+Allow: /sitemap.xml
+Allow: /*.css
+Allow: /*.js
+Allow: /*.png
+Allow: /*.jpg
+Allow: /*.jpeg
+Allow: /*.gif
+Allow: /*.webp
+Allow: /*.svg
+Allow: /*.ico
+
+# Sitemap location
+Sitemap: https://s23010843.github.io/sitemap.xml
+
+# Archive.org exclusions (optional)
+User-agent: ia_archiver
+Disallow: /
+
+# SEO crawler permissions
+User-agent: SemrushBot
+Allow: /
+
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: MJ12bot
+Allow: /
+
+# Social media crawlers
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: LinkedInBot
+Allow: /
+
+# Additional crawl delay for aggressive bots
+User-agent: *
+Crawl-delay: 2
+
+# Host specification (preferred domain)
+Host: https://s23010843.github.io

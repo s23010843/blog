@@ -1,117 +1,374 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description"
-    content="Official Tech Blog - Your source for the latest in tech, data science, AI, and cybersecurity.">
-  <meta name="keywords"
-    content="tech blog, data science, AI, machine learning, cybersecurity, python, software development">
-
+  
+  <!-- Enhanced SEO Meta Tags -->
+  <meta name="description" content="Official Tech Blog - Your premier source for cutting-edge technology insights, data science tutorials, AI developments, cybersecurity best practices, and software development guides.">
+  <meta name="keywords" content="tech blog, data science, artificial intelligence, machine learning, cybersecurity, python programming, software development, web development, cloud computing, devops, programming tutorials">
   <meta name="author" content="s23010843">
-  <meta name="robots" content="index, follow">
-
-  <meta property="og:title" content="Official Tech Blog">
-  <meta property="og:description"
-    content="Your go-to source for tech insights, tutorials, and news on data science, cybersecurity, and AI.">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="language" content="English">
+  <meta name="revisit-after" content="7 days">
+  <meta name="rating" content="general">
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Official Tech Blog - Technology Insights & Tutorials">
+  <meta property="og:description" content="Discover the latest in technology, data science, AI, and cybersecurity with our comprehensive tutorials and expert insights.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://s23010843.github.io">
-  <meta property="og:image" content="https://s23010843.github.io/favicon.ico">
+  <meta property="og:image" content="https://s23010843.github.io/assets/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <meta property="og:site_name" content="Official Tech Blog">
-
+  <meta property="og:locale" content="en_US">
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Official Tech Blog - Technology Insights & Tutorials">
+  <meta name="twitter:description" content="Your go-to source for tech insights, tutorials, and news on data science, cybersecurity, and AI.">
+  <meta name="twitter:image" content="https://s23010843.github.io/assets/twitter-card.png">
+  
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Official Tech Blog",
+    "url": "https://s23010843.github.io",
+    "description": "Premier technology blog covering data science, AI, cybersecurity, and software development",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Official Tech Blog"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://s23010843.github.io/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <!-- PWA Manifest -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1d3557">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <meta name="apple-mobile-web-app-title" content="Tech Blog">
+  
+  <!-- Icons -->
   <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="assets/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512x512.png">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="styles.css" as="style">
+  <link rel="preload" href="script.js" as="script">
+  
   <link rel="stylesheet" href="styles.css">
-
-  <title>Official Tech Blog</title>
-
+  <title>Official Tech Blog - Technology Insights & Tutorials</title>
 </head>
 
 <body>
+  <!-- Skip Link for Accessibility -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <!-- Loading Screen -->
+  <div id="loading-screen" class="loading-screen">
+    <div class="loading-spinner"></div>
+    <p>Loading Tech Blog...</p>
+  </div>
 
   <!-- HEADER -->
-  <header>
-    <section  class="top-bar">
+  <header role="banner">
+    <section class="top-bar">
       <h1>Official Tech Blog</h1>
-      <span id="currentDate"></span>
-      <span id="currentTime"></span>
+      <div class="header-info">
+        <span id="currentDate" aria-label="Current date"></span>
+        <span id="currentTime" aria-label="Current time"></span>
+        <button id="themeToggle" aria-label="Toggle dark mode" title="Toggle Theme">🌙</button>
+      </div>
     </section>
-    <nav>
+    
+    <nav role="navigation" aria-label="Main navigation">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#home" aria-label="Home page">Home</a></li>
+        <li><a href="#about" aria-label="About page">About</a></li>
+        <li><a href="#blog" aria-label="Blog posts">Blog</a></li>
+        <li><a href="#contact" aria-label="Contact page">Contact</a></li>
       </ul>
     </nav>
 
-    <!-- Search Box -->
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="Search..." onkeyup="filterPosts()">
+    <!-- Enhanced Search Box -->
+    <div class="search-container">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search articles..." 
+               onkeyup="filterPosts()" aria-label="Search blog posts">
+        <button class="search-btn" onclick="performSearch()" aria-label="Search">🔍</button>
+      </div>
+      <div class="search-filters">
+        <select id="categoryFilter" onchange="filterByCategory()" aria-label="Filter by category">
+          <option value="">All Categories</option>
+          <option value="data-science">Data Science</option>
+          <option value="cybersecurity">Cybersecurity</option>
+          <option value="ai">Artificial Intelligence</option>
+          <option value="web-dev">Web Development</option>
+        </select>
+      </div>
     </div>
   </header>
 
-  <!-- MAIN -->
-  <main>
+  <!-- MAIN CONTENT -->
+  <main id="main-content" role="main">
     <!-- HOME PAGE -->
-    <section id="home" class="page">
+    <section id="home" class="page" role="region" aria-labelledby="home-title">
       <div class="page-content">
-        <h2>Welcome to Our Blog</h2>
-        <p>We share the latest tech news, tutorials, and insights about development, AI, data science, and more.</p>
+        <div class="hero-section">
+          <h2 id="home-title">Welcome to the Future of Technology</h2>
+          <p class="hero-subtitle">Discover cutting-edge insights in data science, AI, cybersecurity, and software development from industry experts.</p>
+          <div class="cta-buttons">
+            <a href="#blog" class="btn btn-primary">Explore Articles</a>
+            <a href="#about" class="btn btn-secondary">Learn More</a>
+          </div>
+        </div>
+        
+        <div class="featured-stats">
+          <div class="stat-item">
+            <h3>100+</h3>
+            <p>Technical Articles</p>
+          </div>
+          <div class="stat-item">
+            <h3>50K+</h3>
+            <p>Monthly Readers</p>
+          </div>
+          <div class="stat-item">
+            <h3>24/7</h3>
+            <p>Learning Support</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- ABOUT PAGE -->
-    <section id="about" class="page" style="display: none;">
+    <section id="about" class="page" style="display: none;" role="region" aria-labelledby="about-title">
       <div class="page-content">
-        <h2>About Us</h2>
-        <p>We are a group of passionate developers and tech enthusiasts sharing knowledge through blog posts, tutorials,
-          and courses.</p>
+        <h2 id="about-title">About Our Mission</h2>
+        <div class="about-content">
+          <p>We are a collective of passionate technologists, researchers, and industry professionals dedicated to democratizing knowledge in the rapidly evolving tech landscape.</p>
+          
+          <div class="team-section">
+            <h3>Our Expertise</h3>
+            <div class="expertise-grid">
+              <div class="expertise-item">
+                <h4>Data Science & Analytics</h4>
+                <p>Advanced machine learning, statistical analysis, and data visualization techniques.</p>
+              </div>
+              <div class="expertise-item">
+                <h4>Cybersecurity</h4>
+                <p>Threat detection, security architecture, and ethical hacking methodologies.</p>
+              </div>
+              <div class="expertise-item">
+                <h4>Software Engineering</h4>
+                <p>Modern development practices, cloud architecture, and scalable solutions.</p>
+              </div>
+              <div class="expertise-item">
+                <h4>Artificial Intelligence</h4>
+                <p>Deep learning, neural networks, and AI implementation strategies.</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- BLOG PAGE -->
-    <section id="blog" class="posts" style="display: none;">
-      <div class="post" id="post1">
-        <img src="https://via.placeholder.com/800x300" alt="Blog Post">
-        <h2>Mastering Python for Data Analysis</h2>
-        <p>Learn how to leverage Python's powerful libraries for data cleaning, manipulation, and visualization.</p>
-        <a href="#">Read More</a>
+    <section id="blog" class="posts" style="display: none;" role="region" aria-labelledby="blog-title">
+      <h2 id="blog-title" class="section-title">Latest Technology Insights</h2>
+      
+      <div class="post" data-category="data-science" id="post1">
+        <div class="post-image">
+          <img src="https://via.placeholder.com/800x300/1d3557/ffffff?text=Python+Data+Analysis" 
+               alt="Python data analysis visualization" loading="lazy">
+        </div>
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="category">Data Science</span>
+            <time datetime="2024-01-15">January 15, 2024</time>
+          </div>
+          <h3>Mastering Python for Advanced Data Analysis</h3>
+          <p>Discover powerful techniques for data cleaning, manipulation, and visualization using Python's most effective libraries including Pandas, NumPy, and Matplotlib.</p>
+          <div class="post-tags">
+            <span class="tag">Python</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Data Visualization</span>
+          </div>
+          <a href="#" class="read-more-btn" aria-label="Read full article about Python data analysis">Read Full Article</a>
+        </div>
       </div>
-      <div class="post" id="post2">
-        <img src="https://via.placeholder.com/800x300" alt="Blog Post">
-        <h2>Introduction to Cybersecurity for Developers</h2>
-        <p>Understand essential cybersecurity concepts every developer needs to know to secure web applications.</p>
-        <a href="#">Read More</a>
+      
+      <div class="post" data-category="cybersecurity" id="post2">
+        <div class="post-image">
+          <img src="https://via.placeholder.com/800x300/38b6ff/ffffff?text=Cybersecurity+Essentials" 
+               alt="Cybersecurity best practices illustration" loading="lazy">
+        </div>
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="category">Cybersecurity</span>
+            <time datetime="2024-01-12">January 12, 2024</time>
+          </div>
+          <h3>Essential Cybersecurity Practices for Modern Developers</h3>
+          <p>Learn fundamental security concepts every developer must know to build secure applications and protect against common vulnerabilities.</p>
+          <div class="post-tags">
+            <span class="tag">Security</span>
+            <span class="tag">OWASP</span>
+            <span class="tag">Web Security</span>
+          </div>
+          <a href="#" class="read-more-btn" aria-label="Read full article about cybersecurity practices">Read Full Article</a>
+        </div>
+      </div>
+      
+      <div class="post" data-category="ai" id="post3">
+        <div class="post-image">
+          <img src="https://via.placeholder.com/800x300/fca311/000000?text=Machine+Learning+AI" 
+               alt="Machine learning and AI concepts" loading="lazy">
+        </div>
+        <div class="post-content">
+          <div class="post-meta">
+            <span class="category">Artificial Intelligence</span>
+            <time datetime="2024-01-10">January 10, 2024</time>
+          </div>
+          <h3>Building Your First Neural Network from Scratch</h3>
+          <p>Step-by-step guide to understanding and implementing neural networks using TensorFlow and PyTorch for beginners.</p>
+          <div class="post-tags">
+            <span class="tag">Neural Networks</span>
+            <span class="tag">TensorFlow</span>
+            <span class="tag">Deep Learning</span>
+          </div>
+          <a href="#" class="read-more-btn" aria-label="Read full article about neural networks">Read Full Article</a>
+        </div>
       </div>
     </section>
 
     <!-- CONTACT PAGE -->
-    <section id="contact" class="page" style="display: none;">
+    <section id="contact" class="page" style="display: none;" role="region" aria-labelledby="contact-title">
       <div class="page-content">
-        <h2>Contact Us</h2>
-        <p>Feel free to reach out to us through <a href="mailto:">Coming Soon...</a>.</p>
+        <h2 id="contact-title">Get in Touch</h2>
+        <div class="contact-content">
+          <p>Have questions, suggestions, or want to collaborate? We'd love to hear from you!</p>
+          
+          <div class="contact-methods">
+            <div class="contact-item">
+              <h3>📧 Email</h3>
+              <p>Reach out at <a href="mailto:contact@techblog.com">contact@techblog.com</a></p>
+            </div>
+            <div class="contact-item">
+              <h3>💬 Community</h3>
+              <p>Join our discussions on GitHub and Stack Overflow</p>
+            </div>
+            <div class="contact-item">
+              <h3>📱 Social Media</h3>
+              <p>Follow us for daily tech updates and tips</p>
+            </div>
+          </div>
+          
+          <form class="contact-form" onsubmit="handleContactForm(event)">
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject *</label>
+              <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message *</label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Send Message</button>
+          </form>
+        </div>
       </div>
     </section>
 
     <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <h3>Recent Posts</h3>
-      <ul>
-        <li><a href="#post1">Mastering Python for Data Analysis</a></li>
-        <li><a href="#post2">Cybersecurity Essentials for Developers</a></li>
-        <li><a href="#post3">Docker for Beginners</a></li>
-      </ul>
+    <aside class="sidebar" role="complementary" aria-labelledby="sidebar-title">
+      <div class="sidebar-section">
+        <h3 id="sidebar-title">Featured Content</h3>
+        <ul class="recent-posts">
+          <li><a href="#post1">Mastering Python for Data Analysis</a></li>
+          <li><a href="#post2">Cybersecurity Essentials</a></li>
+          <li><a href="#post3">Neural Networks from Scratch</a></li>
+        </ul>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3>Newsletter</h3>
+        <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+          <input type="email" placeholder="Enter your email" required>
+          <button type="submit" class="btn btn-accent">Subscribe</button>
+        </form>
+      </div>
+      
+      <div class="sidebar-section">
+        <h3>Quick Links</h3>
+        <ul class="quick-links">
+          <li><a href="#" aria-label="Privacy Policy">Privacy Policy</a></li>
+          <li><a href="#" aria-label="Terms of Service">Terms of Service</a></li>
+          <li><a href="#" aria-label="RSS Feed">RSS Feed</a></li>
+        </ul>
+      </div>
     </aside>
   </main>
 
   <!-- FOOTER -->
-  <footer>
-    <p>&copy; <span id="currentYear"></span> Blog — All rights reserved.</p>
+  <footer role="contentinfo">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Official Tech Blog</h3>
+        <p>Empowering developers and tech enthusiasts with cutting-edge insights and practical knowledge.</p>
+      </div>
+      <div class="footer-section">
+        <h3>Categories</h3>
+        <ul>
+          <li><a href="#blog">Data Science</a></li>
+          <li><a href="#blog">Cybersecurity</a></li>
+          <li><a href="#blog">AI & ML</a></li>
+          <li><a href="#blog">Web Development</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <div class="social-links">
+          <a href="#" aria-label="GitHub">GitHub</a>
+          <a href="#" aria-label="Twitter">Twitter</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="currentYear"></span> Official Tech Blog — All rights reserved. | 
+         <a href="#" aria-label="Privacy Policy">Privacy</a> | 
+         <a href="#" aria-label="Terms">Terms</a>
+      </p>
+    </div>
   </footer>
 
   <!-- BACK TO TOP BUTTON -->
-  <button id="topBtn" onclick="scrollToTop()">↑</button>
+  <button id="topBtn" onclick="scrollToTop()" aria-label="Back to top" title="Back to Top">↑</button>
+
+  <!-- Offline Message -->
+  <div id="offline-message" class="offline-message" style="display: none;">
+    <p>You're currently offline. Some features may be limited.</p>
+    <button onclick="hideOfflineMessage()">Dismiss</button>
+  </div>
 
   <!-- JS -->
   <script src="script.js"></script>
