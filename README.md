@@ -54,7 +54,6 @@ tech-blog/
 ├── 🖼️ favicon.ico        # Website favicon
 ├── 📖 README.md          # Project documentation
 ├── 🔒 SECURITY.md        # Security policy and guidelines
-├── ⚙️ .replit            # Replit configuration
 └── 📁 assets/            # Images, icons, and media files
     ├── 🖼️ icon-*.png     # PWA icons (various sizes)
     ├── 📷 og-image.png    # Open Graph image
