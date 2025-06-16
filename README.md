@@ -392,10 +392,10 @@ We appreciate all contributors who help make this project better!
 
 **Built with ❤️ by the Official Blog Team**
 
-[🌐 Visit Website](https://s23010843.github.io) • [📚 Documentation](https://github.com/s23010843/tech-blog/wiki) • [🐛 Report Bug](https://github.com/s23010843/tech-blog/issues) • [💡 Request Feature](https://github.com/s23010843/tech-blog/issues/new)
+[🌐 Visit Website](https://s23010843.github.io) • [📚 Documentation](https://github.com/s23010843/blog/wiki) • [🐛 Report Bug](https://github.com/s23010843/blog/issues) • [💡 Request Feature](https://github.com/s23010843/blog/issues/new)
 
-[![GitHub stars](https://img.shields.io/github/stars/s23010843/tech-blog?style=social)](https://github.com/s23010843/tech-blog/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/s23010843/tech-blog?style=social)](https://github.com/s23010843/tech-blog/network/members)
-[![GitHub watchers](https://img.shields.io/github/watchers/s23010843/tech-blog?style=social)](https://github.com/s23010843/tech-blog/watchers)
+[![GitHub stars](https://img.shields.io/github/stars/s23010843/tech-blog?style=social)](https://github.com/s23010843/blog/stargazers)
+[![GitHub forks](https://img.shields.io/github/forks/s23010843/tech-blog?style=social)](https://github.com/s23010843/blog/network/members)
+[![GitHub watchers](https://img.shields.io/github/watchers/s23010843/tech-blog?style=social)](https://github.com/s23010843/blog/watchers)
 
 </div>
