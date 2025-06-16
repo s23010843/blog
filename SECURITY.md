@@ -3,7 +3,7 @@
 
 ## 🛡️ Our Commitment to Security
 
-The **Official Tech Blog** team takes the security of our platform and our users' data seriously. We are committed to maintaining the highest standards of security and privacy protection. This document outlines our security practices, supported versions, and the process for reporting security vulnerabilities.
+The **Official Blog** team takes the security of our platform and our users' data seriously. We are committed to maintaining the highest standards of security and privacy protection. This document outlines our security practices, supported versions, and the process for reporting security vulnerabilities.
 
 ## 📋 Supported Versions
 
