@@ -31,7 +31,6 @@ We actively maintain and provide security updates for the following versions of 
 We encourage responsible disclosure of security vulnerabilities. If you discover a security issue, please follow these steps:
 
 #### 1. **Initial Contact**
-- **Email**: security@techblog.com
 - **Subject**: [SECURITY] Brief description of the issue
 - **Encryption**: Use our PGP key for sensitive information (see below)
 
@@ -65,15 +64,13 @@ For sensitive security reports, please use our PGP public key:
 -----END PGP PUBLIC KEY BLOCK-----
 ```
 
-**Fingerprint**: `1234 5678 9ABC DEF0 1234 5678 9ABC DEF0 12345678`
-
 ## 🏆 Security Recognition Program
 
 ### 🎖️ Hall of Fame
 
 We maintain a security researchers hall of fame to recognize individuals who help improve our security:
 
-#### 2024 Contributors
+#### 2025 Contributors
 - **[Researcher Name]** - Critical XSS vulnerability fix
 - **[Researcher Name]** - Authentication bypass discovery
 - **[Researcher Name]** - Data exposure prevention
@@ -259,16 +256,12 @@ The following items are generally **not considered** security vulnerabilities:
 ### 🚨 Critical Security Incidents
 For **critical security incidents** requiring immediate attention:
 
-- **Emergency Email**: security-emergency@techblog.com
-- **Phone**: +1-555-SECURITY (24/7 on-call)
 - **Escalation**: Contact CEO directly for critical issues
 
 ### 📧 General Security Inquiries
 For non-emergency security questions:
 
-- **Email**: security@techblog.com
 - **Response Time**: Within 48 hours during business days
-- **Office Hours**: Monday-Friday, 9 AM - 5 PM EST
 
 ## 🔄 Security Policy Updates
 
@@ -282,10 +275,10 @@ This security policy is reviewed and updated:
 
 | Date | Version | Changes |
 |------|---------|---------|
-| 2024-01-15 | 2.1.0 | Added bug bounty program details |
-| 2024-01-01 | 2.0.0 | Major policy restructure and updates |
-| 2023-12-15 | 1.9.2 | Updated supported versions table |
-| 2023-12-01 | 1.9.1 | Enhanced reporting process |
+| 2025-06-15 | 2.1.0 | Added bug bounty program details |
+| 2025-06-16 | 2.0.0 | Major policy restructure and updates |
+| 2025-16-16 | 1.9.2 | Updated supported versions table |
+| 2025-16-16 | 1.9.1 | Enhanced reporting process |
 
 ### 📢 Notification Process
 Security policy changes are communicated through:
@@ -320,9 +313,10 @@ We provide security resources for our users:
 
 **We believe security is everyone's responsibility. Thank you for helping us keep our platform safe and secure.**
 
-[📧 Report Security Issue](mailto:security@techblog.com) • [🔐 PGP Key](https://techblog.com/pgp-key) • [📋 Security Updates](https://techblog.com/security-updates)
+Security Updates](https://s23010843.github.io/security-updates)
 
-**Last Updated**: January 15, 2024 | **Version**: 2.1.0 | **Next Review**: April 15, 2024
+**Last Updated**: June 16, 2025 | **Version**: 2.1.0
+
 
 </div>
 
@@ -330,4 +324,3 @@ We provide security resources for our users:
 
 > **Note**: This security policy is a living document and will be updated as our security practices evolve. We encourage community feedback and suggestions for improvement.
 
-**Security Team Contact**: security@techblog.com | **Emergency Hotline**: +1-555-SECURITY

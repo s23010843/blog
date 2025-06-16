@@ -1,5 +1,5 @@
 
-# 🚀 Official Tech Blog - Advanced Web Application
+# 🚀 Official Blog - Advanced Web Application
 
 [![PWA Ready](https://img.shields.io/badge/PWA-Ready-brightgreen.svg)](https://developers.google.com/web/progressive-web-apps/)
 [![Lighthouse Score](https://img.shields.io/badge/Lighthouse-95%2B-brightgreen.svg)](https://developers.google.com/web/tools/lighthouse/)
@@ -8,7 +8,7 @@
 
 ## 🌟 Overview
 
-**Official Tech Blog** is a cutting-edge, progressive web application designed to deliver high-quality technology content with exceptional user experience. Built with modern web standards, it serves as a comprehensive platform for sharing insights in development, data science, cybersecurity, and emerging technologies.
+**Official Blog** is a cutting-edge, progressive web application designed to deliver high-quality technology content with exceptional user experience. Built with modern web standards, it serves as a comprehensive platform for sharing insights in development, data science, cybersecurity, and emerging technologies.
 
 ### 🎯 Mission Statement
 
@@ -82,8 +82,8 @@ tech-blog/
 
 1. **Clone or download the repository**
    ```bash
-   git clone https://github.com/yourusername/tech-blog.git
-   cd tech-blog
+   git clone https://github.com/s23010843/blog.git
+   cd blog
    ```
 
 2. **Open with VS Code and Live Server**
@@ -298,7 +298,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 ```
 MIT License
 
-Copyright (c) 2024 Official Tech Blog
+Copyright (c) 2025 Official Blog
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -314,7 +314,7 @@ copies or substantial portions of the Software.
 ## 👥 Team
 
 ### 🧑‍💻 Core Team
-- **s23010843** - Lead Developer, Designer, Creator
+- **s23010843** - Junior Developer, Designer, Creator
   - Frontend Architecture
   - UI/UX Design
   - Performance Optimization
@@ -336,8 +336,6 @@ We appreciate all contributors who help make this project better!
 - **Emergency**: Use GitHub issues for urgent matters
 
 ### 🌐 Social Media
-- **Twitter**: [@OfficialTechBlog](https://twitter.com/officialtechblog)
-- **LinkedIn**: [Official Tech Blog](https://linkedin.com/company/officialtechblog)
 - **GitHub**: [@s23010843](https://github.com/s23010843)
 
 ## 🗺️ Roadmap
@@ -370,7 +368,7 @@ We appreciate all contributors who help make this project better!
 - **Languages**: English (primary), with plans for localization
 - **Devices**: 60% Desktop, 35% Mobile, 5% Tablet
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 ### 🎨 Design Inspiration
 - **Material Design**: Google's design system principles
@@ -393,7 +391,7 @@ We appreciate all contributors who help make this project better!
 
 <div align="center">
 
-**Built with ❤️ by the Official Tech Blog Team**
+**Built with ❤️ by the Official Blog Team**
 
 [🌐 Visit Website](https://s23010843.github.io) • [📚 Documentation](https://github.com/s23010843/tech-blog/wiki) • [🐛 Report Bug](https://github.com/s23010843/tech-blog/issues) • [💡 Request Feature](https://github.com/s23010843/tech-blog/issues/new)
 
